@@ -1,0 +1,17 @@
+{
+  "name": "persona",
+  "version": "1.0.0",
+  "description": "My personal visiting card website.",
+  "main": "index.js",
+  "scripts": {},
+  "author": "err0r522",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/err0r522/persona.git"
+  },
+  "bugs": {
+    "url": "https://github.com/err0r522/persona/issues"
+  },
+  "homepage": "https://github.com/err0r522/persona#readme"
+}

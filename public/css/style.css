@@ -1,0 +1,261 @@
+body, p, h1, h2 {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+    background-color: #BFD7EA;
+    transition: color 1s, background-color 2s;
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
+
+.header, .footer {
+    background-color: #9bb0c0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+
+.header-avatar {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #109648;
+    border-radius: 50%;
+}
+
+.header-nmode {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+.row1 {
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    background-image: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(191,215,234,1) 99%);
+    border: 5px solid #0B3954;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+    flex-grow: 1;
+}
+
+.socials {
+    background-color: #eee;
+    border: 5px solid #0B3954;
+    border-radius: 10px;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.socials-button-row {
+    display: flex;
+}
+
+.socials-btn {
+    flex-basis: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.socials-btn-img {
+    width: 50px;
+    height: 50px;
+}
+
+#socials-btn-yt {
+    background-color: #FF3D00;
+}
+
+#socials-btn-gh {
+    background-color: white;
+}
+
+.socials-widget {
+    text-align: center;
+}
+
+.socials-widget img {
+    margin: auto;
+}
+
+.socials-widget p {
+    margin: 50px 0 50px 0;
+}
+
+.info-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.row2 {
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects-row {
+    padding: 0 40px 0 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+}
+
+.projects-card {
+    flex-basis: 300px;
+    border: 5px solid #0B3954;
+    border-radius: 5%;
+    padding: 10px;
+    background-color: #a7becc;
+    color: black;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.projects-card:hover {
+    background-color: #81929d;
+}
+
+.projects-card:active, .projects-card:focus-visible {
+    background-color: #4d575d;
+}
+
+.disabled {
+    cursor: default;
+}
+
+.projects-image {
+    width: 300px;
+    height: 250px;
+    border: 4px solid black;
+    border-radius: 20%;
+}
+
+.projects-desc {
+    background-image: radial-gradient(circle, rgb(201, 216, 229) 75%, #a7becc 100%);
+    text-decoration: none !important;
+}
+
+.yellow {
+    color: orangered;
+}
+
+.blue {
+    color: blue;
+}
+
+footer {
+    padding: 0 10px 0 10px;
+}
+
+.footer-button {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 1599px) {
+    .projects-row{
+        flex-wrap: wrap;
+    }
+    .projects-card {
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 959px) {
+    .row1 {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .socials {
+        flex-grow: 1;
+    }
+}
+
+.dark {
+    background-color: #0B3954;
+    color: white;
+}
+
+.dark .header, .dark .footer {
+    background-color: #06202f;
+}
+
+.dark .header-card {
+    color: white;
+    transition: 2s;
+}
+
+.dark .info {
+    background-image: radial-gradient(circle, rgba(255,255,255,1) 25%, #0B3954 99%);
+    color: black;
+    border-color: black;
+}
+
+.dark .socials {
+    background-color: #08293c;
+    border-color: black;
+}
+
+.dark .projects-card {
+    border-color: black;
+    background-color: #156c9e78;
+    color: white;
+}
+
+.dark .projects-card:hover {
+    background-color: #11588178;
+}
+
+.dark .projects-card:active, .dark .projects-card:focus-visible {
+    background-color: #0e426178;
+}
+
+.dark .projects-desc {
+    background-image: radial-gradient(circle, #0a3249 75%, #ffffff00 100%);
+}
+
+.dark .blue {
+    color: skyblue;
+}
