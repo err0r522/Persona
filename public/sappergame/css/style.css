@@ -8,6 +8,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -19,8 +20,8 @@ body {
 
 .stats {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    width: 400px;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -92,4 +93,12 @@ body {
 
 .d-none {
     display: none;
+}
+
+.state-timer {
+    width: 30px;
+}
+
+.state-flags {
+    width: 50px;
 }

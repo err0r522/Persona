@@ -1,6 +1,7 @@
 let boardContainer = document.querySelector(`.board`);
 let flagsCounterNode = document.querySelector(`.remaining-text`);
 let finishButton = document.querySelector(`.finish`);
+let timerNode = document.querySelector(`.timer-text`);
 
 for(let i = 0; i < 81; i++){
     boardContainer.innerHTML += `<div class="box animate__animated" id="box-r${Math.floor(i / 9)}c${i % 9}"><p class="box-text d-none"></p></div>`
@@ -16,6 +17,8 @@ let flagsCounter = 0;
 let flags = [];
 let gameover = false;
 let gamewin = false;
+let timer = 0;
+let timerInterval = null;
 
 
 let audioTestEl = document.createElement('audio');
@@ -54,6 +57,23 @@ function createNumbers(){
             }
         }
     }
+}
+
+function timerStart(){
+    timerInterval = setInterval(function(){
+        if (timer < 5999) timer++;
+        timerNode.innerHTML = `${timerFormat(Math.floor(timer/60))}:${timerFormat(timer % 60)}`;
+    }, 1000);
+}
+
+function timerFormat(t){
+    let s = t.toString();
+    if(s.length < 2) s = "0" + s;
+    return s
+}
+
+function timerStop(){
+    clearInterval(timerInterval);
 }
 
 boardContainer.addEventListener(`click`, evt => {
@@ -97,6 +117,8 @@ boardContainer.addEventListener(`click`, evt => {
 
         createNumbers();
 
+        timerStart();
+
         if(audioTest) playSfx(`open`);
         
     } else {
@@ -110,6 +132,8 @@ boardContainer.addEventListener(`click`, evt => {
                 box.classList.add(`animate__heartBeat`);
                 setTimeout(() => box.classList.remove(`animate__heartBeat`), 1000);
                 finishButton.value = `Начать сначала?`;
+
+                timerStop();
 
                 if(audioTest) playSfx(`explode`);
             } else {
@@ -193,5 +217,6 @@ finishButton.addEventListener(`click`, () => {
         }
     }
     gamewin = true;
+    timerStop();
     finishButton.value = `Начать сначала?`;
 });
