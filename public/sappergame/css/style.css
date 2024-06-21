@@ -102,3 +102,31 @@ body {
 .state-flags {
     width: 50px;
 }
+
+#rules-click {
+    color: gray;
+    margin: 5px 5px 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#rules-click:hover {
+    cursor: pointer;
+    color: darkgray;
+}
+
+.rules-modal {
+    position:absolute;
+    top: 0;
+    background-color: lightgray;
+    margin: 5px;
+    border: 5px solid black;
+    border-radius: 25px;
+    transition: all 5s;
+}
+
+.rules-tip {
+    color: gray;
+    font-size: 25px;
+}

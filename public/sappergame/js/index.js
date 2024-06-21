@@ -220,3 +220,17 @@ finishButton.addEventListener(`click`, () => {
     timerStop();
     finishButton.value = `Начать сначала?`;
 });
+
+// Rules modal
+
+let rulesNode = document.querySelector(`.rules-modal`);
+let rulesClick = document.querySelector(`#rules-click`);
+document.addEventListener(`click`, evt => {
+    if(!rulesNode.classList.contains(`d-none`) && evt.target.id != `rules-click`){
+        rulesNode.classList.add(`d-none`);
+    }
+});
+
+rulesClick.addEventListener(`click`, () => {
+    rulesNode.classList.remove(`d-none`);
+});

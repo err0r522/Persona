@@ -13,11 +13,25 @@
     <title>Сапёрчик</title>
 </head>
 <body>
+    <p id="rules-click">Правила</p>
+    <div class="rules-modal d-none">
+        <p class="rules-top">
+            Найдите все мины и поставьте на них флажки. Номера на открытых полях подсказывают количество мин на расстоянии одной клетки
+            во всех направлениях (в том числе диагональных). Если все флажки расставлены или необходимо завершить игру досрочно, нажмите
+            на кнопку "Закончить игру".
+        </p>
+        <p class="rules-bottom">
+            Управление: ЛКМ - открыть клетку, ПКМ - поставить/снять флажок.
+        </p>
+        <p class="rules-tip">
+            Нажмите в любое место, чтобы закрыть.
+        </p>
+    </div>
     <div class="container">
         <h1>Сапёрчик</h2>
         <div class="board"></div>
         <div class="stats">
-            <div class="state">
+            <div class="state state-flags">
                 <p class="remaining-text">
                     0
                 </p>
@@ -26,7 +40,7 @@
             <div class="state">
                 <input class="finish" type="button" value="Закончить игру">
             </div>
-            <div class="state">
+            <div class="state state-timer">
                 <p class="timer-text">
                     00:00
                 </p>
