@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+}
+
+.stats {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.state {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.state img {
+    width: 30px;
+    height: 30px;
+}
+
+.state p {
+    margin: 0;
+}
+
+.box {
+    background-color: #808080;
+    border: 3px solid black;
+    padding: auto;
+    color: lime;
+}
+
+.box:hover {
+    background-color: #AAAAAA;
+}
+
+.box-open {
+    background-color: #EEEEEE;
+}
+
+.box-open:hover {
+    background-color: #EEEEEE;
+}
+
+.box-exploded {
+    background-color: red;
+}
+
+.box-exploded:hover {
+    background-color: red;
+}
+
+.box-neutralized {
+    background-color: green;
+}
+
+.box-neutralized:hover {
+    background-color: green;
+}
+
+.box-text{
+    margin: 5px 5px 5px 5px;
+}
+
+.finish {
+    width: 200px;
+    height: 50px;
+    margin: 3px;
+    border-radius: 15px;
+}
+
+.box-img {
+    width: 45px;
+    height: 45px;
+}
+
+.d-none {
+    display: none;
+}
